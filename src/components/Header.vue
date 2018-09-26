@@ -2,9 +2,9 @@
   <div>
 		<div class="header">
 			<div class="btms">
-			<img src="../assets/images/menu.png" />
+			<img src="../assets/images/menu.png" @click="openClick" />
 			</div>
-			<Manage></manage>
+			<Manage :open.sync='isopen'></manage>
 		</div>
   </div>
 </template>
@@ -17,7 +17,12 @@
 		},
 		data(){
 			return{
-				
+				isopen:false
+			}
+		},
+		methods:{
+			openClick(){
+				this.isopen=true
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 <template>
 	<div class="navs">
-		<div class="sidebar open">
+		<div class="sidebar" v-bind:class="{open:open}">
 			<div class="sidebar-inner-index">
 				<ul class="main-menu">
 					<li>
@@ -81,101 +81,14 @@
 									</li>
 								</ul>
 							</li>
-							<li>
-								<h4>信息</h4></li>
-							<li>
-								<ul>
-									<li>
-										<a href="https://news.vuejs.org" class="nav-link" target="_blank">周刊</a>
-									</li>
-									<li>
-										<a href="https://github.com/vuejs/roadmap" class="nav-link" target="_blank">Roadmap</a>
-									</li>
-									<li>
-										<a href="https://twitter.com/vuejs" class="nav-link" target="_blank">Twitter</a>
-									</li>
-									<li>
-										<a href="https://medium.com/the-vue-point" class="nav-link" target="_blank">博客</a>
-									</li>
-									<li>
-										<a href="https://vuejobs.com/?ref=vuejs" class="nav-link" target="_blank">工作</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<h4>资源列表</h4></li>
-							<li>
-								<ul>
-									<li>
-										<a href="https://github.com/vuejs" class="nav-link" target="_blank">官方仓库</a>
-									</li>
-									<li>
-										<a href="https://curated.vuejs.org/" class="nav-link" target="_blank">Vue 优选</a>
-									</li>
-									<li>
-										<a href="https://github.com/vuejs/awesome-vue" class="nav-link" target="_blank">Vue 资源</a>
-									</li>
-								</ul>
-							</li>
+							
+							
 						</ul>
 					</li>
 
 					<li>
 						<a href="/v2/guide/team.html" class="nav-link team">团队</a>
 					</li>
-					<li class="nav-dropdown-container support-vue">
-						<a href="/support-vuejs/" class="nav-link">支持 Vue</a><span class="arrow"></span>
-						<ul class="nav-dropdown">
-							<li>
-								<ul>
-									<li>
-										<a href="/support-vuejs/#One-time-Donations" class="nav-link">一次性赞助</a>
-									</li>
-									<li>
-										<a href="/support-vuejs/#Recurring-Pledges" class="nav-link">周期性赞助</a>
-									</li>
-									<li>
-										<a href="https://www.smallsticker.com/%E8%B4%B4%E7%BA%B8/vue.html" class="nav-link">贴纸</a>
-									</li>
-									<li>
-										<a href="https://vue.threadless.com" target="_blank" class="nav-link">T 恤商店</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-
-					<li class="nav-dropdown-container language">
-						<a class="nav-link">多语言</a><span class="arrow"></span>
-						<ul class="nav-dropdown">
-							<li>
-								<a href="https://vuejs.org/index.html" class="nav-link" target="_blank">English</a>
-							</li>
-							<li>
-								<a href="https://jp.vuejs.org/index.html" class="nav-link" target="_blank">日本語</a>
-							</li>
-							<li>
-								<a href="https://ru.vuejs.org/index.html" class="nav-link" target="_blank">Русский</a>
-							</li>
-							<li>
-								<a href="https://kr.vuejs.org/index.html" class="nav-link" target="_blank">한국어</a>
-							</li>
-							<li>
-								<a href="https://br.vuejs.org/index.html" class="nav-link" target="_blank">Português</a>
-							</li>
-							<li>
-								<a href="https://fr.vuejs.org/index.html" class="nav-link" target="_blank">Français</a>
-							</li>
-							<li>
-								<a href="https://vi.vuejs.org/index.html" class="nav-link" target="_blank">Tiếng Việt</a>
-							</li>
-						</ul>
-					</li>
-
-					<li>
-						<a href="https://github.com/vuejs/cn.vuejs.org/" target="_blank" class="nav-link contribute">参与翻译</a>
-					</li>
-
 				</ul>
 			</div>
 		</div>
@@ -186,11 +99,19 @@
 	export default {
 		name: 'manage',
 		components: {},
+		    props: {
+		      open: Boolean,
+		      required: true
+		    },
 		data() {
 			return {
-
+				name:''
 			}
+		},
+		mounted:function(){
+			console.log(this.open)
 		}
+	
 	}
 </script>
 

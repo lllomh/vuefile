@@ -42,7 +42,11 @@ let webpackConfig = {
       },
 //    {
 //    	test: /\.less$/,
-//		loader: "style-loader!css-loader!less-loader",
+//		loaders: ['style','css','less'],
+//    },
+//     {
+//    	test: /\.scss$/,
+//		loaders: ['style','css','less'],
 //    },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
