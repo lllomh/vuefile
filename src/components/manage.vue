@@ -1,6 +1,6 @@
 <template>
 	<div class="navs">
-		<div class="sidebar" v-bind:class="{open:open}">
+		<div class="sidebar" id="sidebar" v-bind:class="{'open':open}">
 			<div class="sidebar-inner-index">
 				<ul class="main-menu">
 					<li>
@@ -109,7 +109,7 @@
 			}
 		},
 		mounted:function(){
-			console.log(this.open)
+			console.log(this.open+11)
 		}
 	
 	}

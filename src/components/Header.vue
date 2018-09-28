@@ -2,7 +2,7 @@
   <div>
 		<div class="header">
 			<div class="btms">
-			<img src="../assets/images/menu.png" @click="openClick" />
+				<span id="btms"><img src="../assets/images/menu.png" @click="openClick" /></span>
 			</div>
 			<Manage :open.sync='isopen'></manage>
 		</div>
@@ -19,6 +19,22 @@
 			return{
 				isopen:false
 			}
+		},
+		mounted:function(){
+			var _this = this;
+			document.getElementById("body").addEventListener("click", function(){
+									_this.isopen=false
+									
+					   console.log(_this.isopen)
+					});
+					
+					document.getElementById("sidebar").addEventListener("click", function(even){
+						even.stopPropagation()
+					});
+					
+					document.getElementById("btms").addEventListener("click", function(even){
+						even.stopPropagation()
+					});
 		},
 		methods:{
 			openClick(){
