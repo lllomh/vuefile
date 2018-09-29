@@ -1,6 +1,6 @@
 <template>
   <div>
-		<div class="header">
+		<div class="header" :class="{'top':istop}" id="mobile-bar">
 			<div class="btms">
 				<span id="btms"><img src="../assets/images/menu.png" @click="openClick" /></span>
 			</div>
@@ -17,28 +17,44 @@
 		},
 		data(){
 			return{
-				isopen:false
+				isopen:false,
+				istop:false
 			}
 		},
 		mounted:function(){
 			var _this = this;
 			document.getElementById("body").addEventListener("click", function(){
 									_this.isopen=false
-									
-					   console.log(_this.isopen)
+
 					});
-					
+
 					document.getElementById("sidebar").addEventListener("click", function(even){
 						even.stopPropagation()
 					});
-					
+
 					document.getElementById("btms").addEventListener("click", function(even){
 						even.stopPropagation()
 					});
+
+
 		},
+        watch:{
+            $route(to,from){
+               if(to.path=='/'){
+
+                   this.istop=true
+			   }else {
+                   this.istop=false
+         
+			   }
+            }
+        },
 		methods:{
 			openClick(){
 				this.isopen=true
+			},
+			istops(){
+			    console.log(this.$route.path)
 			}
 		}
 	}
@@ -56,4 +72,23 @@
 	    top: 8px;
 	    left: 12px;
 	}
+
+	#mobile-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    z-index: 9;
+    display: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+}
+	#mobile-bar {
+    display: block;
+}
+#mobile-bar.top {
+    background-color: transparent;
+    box-shadow: none;
+}
 </style>

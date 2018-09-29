@@ -81,8 +81,8 @@
 									</li>
 								</ul>
 							</li>
-							
-							
+
+
 						</ul>
 					</li>
 
@@ -111,9 +111,14 @@
 		mounted:function(){
 			console.log(this.open+11)
 		}
-	
+
 	}
 </script>
+
+<style lang="sass">
+	@import url("../assets/scss/page.scss");
+</style>
+
 
 <style scoped="scoped">
 	.sidebar {
