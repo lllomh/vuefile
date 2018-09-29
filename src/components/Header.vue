@@ -3,6 +3,7 @@
 		<div class="header" :class="{'top':istop}" id="mobile-bar">
 			<div class="btms">
 				<span id="btms"><img src="../assets/images/menu.png" @click="openClick" /></span>
+				<router-link to="/" v-show="!istop"><a class="logo" href="javascript:;"></a></router-link>
 			</div>
 			<Manage :open.sync='isopen'></manage>
 		</div>
@@ -36,16 +37,22 @@
 						even.stopPropagation()
 					});
 
+					if(this.$route.path=='/'){
+                        this.istop=true
+					}else {
+                        this.istop=false
+					}
 
 		},
         watch:{
             $route(to,from){
+
                if(to.path=='/'){
 
                    this.istop=true
 			   }else {
                    this.istop=false
-         
+
 			   }
             }
         },

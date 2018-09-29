@@ -198,7 +198,7 @@
               <a href="https://scrimba.com/p/pXKqta/cEQVkA3" target="_blank">在 Scrimba 上尝试这节课</a>
           </div>
           <p>组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树：</p>
-          <p><img src="/images/components.png" alt="Component Tree" /></p>
+          <p><img src="../assets/images/components.png" alt="Component Tree" /></p>
           <p>在 Vue 里，一个组件本质上是一个拥有预定义选项的一个 Vue 实例。在 Vue 中注册组件很简单：</p>
           <figure class="highlight js">
               <table>
