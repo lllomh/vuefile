@@ -240,7 +240,7 @@ code {
   padding: 3px 5px;
   margin: 0 2px;
   border-radius: 2px;
-  white-space: nowrap;
+
 }
 em {
   color: #7f8c8d;
@@ -293,6 +293,9 @@ a.button.gray {
   border-collapse: collapse;
   padding: 0;
   margin: 0;
+  height: 190px;
+  display: block;
+
 }
 .highlight .gutter {
   width: 1.5em;
@@ -301,6 +304,8 @@ a.button.gray {
   padding: 1.2em 1.4em;
   line-height: 1.5em;
   margin: 0;
+  overflow: hidden;
+  display: block
 }
 .highlight .code .line {
   min-height: 1.5em;
@@ -504,12 +509,12 @@ body.docs #nav {
   left: 8px;
 }
 .nav-link {
-  padding-bottom: 3px;
+  padding-bottom: 1px;
   white-space: nowrap;
 }
 .nav-link:hover,
 .nav-link.current {
-  border-bottom: 3px solid #42b983;
+  border-bottom: 2px solid #42b983;
 }
 .nav-link.team,
 .nav-link.contribute {

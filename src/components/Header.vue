@@ -54,7 +54,11 @@
                    this.istop=false
 
 			   }
+
+			   this.isopen=false
             }
+
+
         },
 		methods:{
 			openClick(){

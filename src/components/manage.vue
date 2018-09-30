@@ -14,19 +14,57 @@
 							<li>
 								<ul>
 									<li>
-										<a href="/v2/guide/" class="nav-link">教程</a>
+										<router-link to="guide"><a href="javascript:;" class="nav-link">教程</a></router-link>
 									</li>
 									<li>
-										<a href="/v2/api/" class="nav-link">API</a>
+										<router-link to="api"><a href="javascript:;" class="nav-link">API</a></router-link>
 									</li>
 									<li>
-										<a href="/v2/style-guide/" class="nav-link">风格指南</a>
+										<router-link to="styleguide"><a href="javascript:;" class="nav-link">风格指南</a></router-link>
 									</li>
 									<li>
-										<a href="/v2/examples/" class="nav-link">示例</a>
-									</li>
-									<li>
-										<a href="/v2/cookbook/" class="nav-link">Cookbook</a>
+										<a href="javascript:;" class="nav-link">Cookbook</a>
+											<li>
+												<ul>
+													<li>
+														<router-link to="cookbook"><a href="javascript:;" class="nav-link">介绍</a></router-link>
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">添加实例属性</a></router-link>
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">表单校验</a></router-link>
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">可编辑的 SVG 图标系统</a></router-link>
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">创建一个基于 CMS 的博客</a></router-link>
+
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">Vue 组件的单元测试</a></router-link>
+
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">创建自定义滚动指令</a></router-link>
+
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">在 VS Code 和 Chrome 中调试</a></router-link>
+
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">使用 axios 访问 API</a></router-link>
+
+													</li>
+													<li>
+														<router-link to=""><a href="javascript:;" class="nav-link">避免内存泄漏</a></router-link>
+
+													</li>
+												</ul>
+											</li>
+										</ul>
 									</li>
 								</ul>
 							</li>
@@ -173,7 +211,7 @@ a {
     padding-left: 1em;
 }
 .nav-link {
-    padding-bottom: 3px;
+    padding-bottom: 1px;
     white-space: nowrap;
 }
 .sidebar .search-query {

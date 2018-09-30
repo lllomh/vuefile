@@ -24,7 +24,7 @@
   <div class="fixs" :class="{'showdix':isshows}" @click="hidepop"></div>
   <div id="video-modal" class="modal" :class="{'open':isshows}">
   <div class="video-space" style="position: relative;text-align: center;" >
-     this is vue js
+     this is vue js 2.0
   </div>
 </div>
 </div>
